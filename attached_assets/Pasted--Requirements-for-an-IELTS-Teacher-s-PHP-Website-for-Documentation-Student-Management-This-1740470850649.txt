@@ -1,0 +1,82 @@
+### **Requirements for an IELTS Teacher's PHP Website for Documentation & Student Management**
+
+This website will help you manage your students, track their progress, store teaching materials, and organize lessons efficiently. Below are the key requirements:
+
+---
+
+## **1. Core Features**
+### **A. User Management**
+- **Admin Panel:** Secure login for the teacher (you) to manage everything.
+- **Student Accounts:** Students can register and log in to track their progress.
+- **Roles & Permissions:** Different levels of access (Admin/Student).
+
+### **B. Student Record Management**
+- **Student Profiles:** Name, contact, IELTS level, test history, and notes.
+- **Progress Tracking:** Record scores from mock tests (Listening, Reading, Writing, Speaking).
+- **Attendance Management:** Track lesson attendance.
+- **Payment Tracking:** Record student payments (optional).
+
+### **C. Lesson & Course Management**
+- **Course Creation:** Organize lessons into courses (e.g., "IELTS Writing Task 1 Mastery").
+- **Lesson Materials:** Upload PDFs, Word documents, videos, and audio files.
+- **Assignment Submissions:** Allow students to submit writing/speaking exercises.
+
+### **D. Test & Evaluation System**
+- **Mock Test System:** Students can take practice IELTS tests (Listening, Reading, Writing, Speaking).
+- **Automated Scoring:** Use PHP and AI APIs to auto-score Reading & Listening.
+- **Manual Grading:** Allow the teacher to review Writing & Speaking and give feedback.
+- **Performance Reports:** Generate performance analytics.
+
+### **E. Document & Resource Management**
+- **File Upload & Organization:** Store lesson plans, tests, and student feedback.
+- **Secure Access:** Restrict students from unauthorized files.
+- **Search & Filtering:** Find documents by keyword or category.
+
+### **F. Notifications & Messaging**
+- **Email/SMS Notifications:** Remind students about upcoming classes and assignments.
+- **Internal Messaging:** Chat between teacher and students.
+
+---
+
+## **2. Technology Stack**
+- **Backend:** PHP (Laravel or CodeIgniter)
+- **Frontend:** Bootstrap + jQuery (or Vue.js for interactivity)
+- **Database:** MySQL or PostgreSQL
+- **Authentication:** JWT or Laravel Sanctum
+- **Storage:** Cloud-based (AWS S3, Google Drive API) or local storage
+- **AI Integration (Optional):** OpenAI API for writing feedback automation
+
+---
+
+## **3. Database Schema (Simplified)**
+### **Users Table**
+| ID | Name | Email | Role (Admin/Student) | Password | Created At |
+|----|------|-------|----------------------|----------|------------|
+
+### **Students Table**
+| ID | User_ID | IELTS Level | Notes | Joined At |
+|----|--------|-------------|-------|-----------|
+
+### **Courses Table**
+| ID | Title | Description | Teacher_ID | Created At |
+|----|-------|-------------|------------|------------|
+
+### **Lessons Table**
+| ID | Course_ID | Title | Content | File_URL | Created At |
+|----|----------|-------|---------|----------|------------|
+
+### **Tests Table**
+| ID | Student_ID | Type (Listening, Reading, etc.) | Score | Feedback | Taken At |
+|----|-----------|--------------------------------|-------|----------|---------|
+
+---
+
+## **4. Additional Features**
+✅ **Multi-Language Support** (For international students)  
+✅ **Mobile-Friendly Design**  
+✅ **API Integration for IELTS Resources** (Cambridge, British Council)  
+✅ **AI Writing & Speaking Feedback** (Future Upgrade)
+
+---
+
+Would you like me to create a UI design mockup or a basic PHP structure for this?
